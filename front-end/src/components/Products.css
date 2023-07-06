@@ -1,0 +1,51 @@
+.card {
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: lime;
+    font-size: large;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+.productcat{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+.proproducts{
+    display :flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+select{
+   position: relative;
+   left:45%;
+}
+.container_pro{
+    position: relative;
+    margin-top: 10%;
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content: center;
+    margin-bottom: 10%;
+
+}
+.container_pro img {
+    height: 500px;
+    width: 500px;
+    padding-right: 30px;
+}
+.informations{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.informations button {
+    background-color: lime;
+}

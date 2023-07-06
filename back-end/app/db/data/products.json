@@ -1,0 +1,87 @@
+[
+    {
+      "name": "Phone 1",
+      "description": "Smartphone with great features",
+      "price": 500,
+      "quantity": 10,
+      "imageUrl": "https://example.com/phone1.jpg",
+      "category": "phone"
+    },
+    {
+      "name": "Phone 2",
+      "description": "High-performance mobile device",
+      "price": 700,
+      "quantity": 15,
+      "imageUrl": "https://example.com/phone2.jpg",
+      "category": "phone"
+    },
+  
+    {
+      "name": "PC 1",
+      "description": "Powerful desktop computer",
+      "price": 1200,
+      "quantity": 5,
+      "imageUrl": "https://example.com/pc1.jpg",
+      "category": "pc"
+    },
+    {
+      "name": "PC 2",
+      "description": "Gaming PC with advanced graphics",
+      "price": 2000,
+      "quantity": 8,
+      "imageUrl": "https://example.com/pc2.jpg",
+      "category": "pc"
+    },
+  
+    {
+      "name": "Element Bureautique 1",
+      "description": "Office workstation for productivity",
+      "price": 800,
+      "quantity": 12,
+      "imageUrl": "https://example.com/element1.jpg",
+      "category": "element bureautique"
+    },
+    {
+      "name": "Element Bureautique 2",
+      "description": "Compact and efficient office equipment",
+      "price": 600,
+      "quantity": 10,
+      "imageUrl": "https://example.com/element2.jpg",
+      "category": "element bureautique"
+    },
+  
+    {
+      "name": "Hardware 1",
+      "description": "Computer peripherals and accessories",
+      "price": 100,
+      "quantity": 20,
+      "imageUrl": "https://example.com/hardware1.jpg",
+      "category": "hardware"
+    },
+    {
+      "name": "Hardware 2",
+      "description": "High-quality audio equipment",
+      "price": 150,
+      "quantity": 15,
+      "imageUrl": "https://example.com/hardware2.jpg",
+      "category": "hardware"
+    },
+  
+    {
+      "name": "Console 1",
+      "description": "Gaming console with immersive gaming experience",
+      "price": 400,
+      "quantity": 8,
+      "imageUrl": "https://example.com/console1.jpg",
+      "category": "console"
+    },
+    {
+      "name": "Console 2",
+      "description": "Portable gaming console for on-the-go gaming",
+      "price": 250,
+      "quantity": 10,
+      "imageUrl": "https://example.com/console2.jpg",
+      "category": "console"
+    }
+  ]
+  
