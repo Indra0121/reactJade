@@ -45,7 +45,10 @@ select{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 300px;
 }
 .informations button {
     background-color: lime;
+    width: 100px;
+    height: 60px;
 }

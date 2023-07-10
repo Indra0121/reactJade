@@ -4,11 +4,12 @@ import About_us from './components/About_us';
 import Products from './components/products';
 import Single_page from './components/single_page';
 import { FaCartPlus } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import 'bootstrap/dist/css/bootstrap.css';
-
+import SignInSignUpForm from './components/Login';
 const Navbar = () => {
   const [show, setShow] = useState(false);
 
@@ -21,7 +22,10 @@ const Navbar = () => {
         <li><Link to="/">Accueil</Link></li>
         <li><Link to="/products">Produit</Link></li>
         <li><Link to="/about_us">À propos de nous</Link></li>
-        <button variant="primary" onClick={handleShow}><i><FaCartPlus /></i></button>
+        <Link to ="/login"><i><FaUser /></i></Link>
+        
+        
+        <Link  variant="primary" onClick={handleShow}><i><FaCartPlus /></i></Link >
       </ul>
       <form>
         <input type="text" name="text1" placeholder="search..." />
@@ -91,6 +95,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about_us" element={<About_us />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/login" element={<SignInSignUpForm />} />
+
         <Route path="/products/:id" element={<Single_page />} />
       </Routes>
       <hr />

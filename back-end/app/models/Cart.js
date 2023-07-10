@@ -26,18 +26,11 @@ const cartSchema = new mongoose.Schema(
     },
   },
   {
-    toJSON: {
-      virtuals: true,
-      transform: function (doc, ret) {
-        ret.id = ret._id;
-        delete ret._id;
-      },
-    },
+ 
   }
 );
 
 // Populate the referenced models when querying the cart
-
 
 const Cart = mongoose.model("Cart", cartSchema);
 

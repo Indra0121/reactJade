@@ -4,7 +4,6 @@ const connect = require("./config/db")
 const router = require('./routes/Index');
 const cors = require("cors");
 
-// Load environment variables
 dotenv.config();
 
 // Create Express app
@@ -24,6 +23,9 @@ app.use('/', router);
 // Set up route
 app.get("/", (req, res) => {
   res.send("Hello, World!");
+});
+app.get("/posts", (req, res) => {
+  res.json(posts);
 });
 
 // Start the server

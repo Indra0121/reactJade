@@ -89,8 +89,8 @@ exports.updateCart = async (req, res) => {
 
 exports.addToCart = async (req, res) => {
   try {
-    const { product_id, quantity } = req.body;
-    const user_id = req.params.userId;
+    const { product_id, quantity,user_id } = req.body;
+    
 
     let cart = await Cart.findOne({ user_id });
 
@@ -211,10 +211,3 @@ exports.updateCart = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-
-
-
-
-
-
-
