@@ -115,6 +115,8 @@ const SignInSignUpForm = () => {
             const userId = decodedToken.userId;
             console.log(userId);
           localStorage.setItem('userId', userId);
+          window.location.href = '/products';
+
 
         } else {
           // Handle login failure
@@ -144,7 +146,7 @@ const SignInSignUpForm = () => {
 
   return (
     <>
-      <style></style>
+     
 
       <div className="container" id="container">
         <div className="form-container sign-up-container">

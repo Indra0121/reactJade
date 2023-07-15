@@ -48,7 +48,7 @@ exports.updateCart = async (req, res) => {
     const { quantity } = req.body;
 
     const existingProduct = cart.products.find(
-      (product) => product.product_id.toString() === productId
+      (product) => product.product_id== productId
     );
 
     if (!existingProduct) {
@@ -87,10 +87,14 @@ exports.updateCart = async (req, res) => {
 
 
 
+// Function to calculate the quantity
+const calculateQuantity = (existingQuantity, newQuantity) => {
+  return parseInt(existingQuantity) + parseInt(newQuantity);
+};
+
 exports.addToCart = async (req, res) => {
   try {
-    const { product_id, quantity,user_id } = req.body;
-    
+    const { product_id, quantity, user_id } = req.body;
 
     let cart = await Cart.findOne({ user_id });
 
@@ -105,12 +109,15 @@ exports.addToCart = async (req, res) => {
 
     // Check if product already exists in cart
     const existingProduct = cart.products.find(
-      (product) => product.product_id.toString() === product_id
+      (product) => product.product_id == product_id
     );
 
     if (existingProduct) {
-      // Update quantity
-      existingProduct.quantity += quantity;
+      // Update quantity using the calculateQuantity function
+      existingProduct.quantity = calculateQuantity(
+        existingProduct.quantity,
+        quantity
+      );
     } else {
       // Add new product to cart
       cart.products.push({ product_id, quantity });
@@ -121,7 +128,9 @@ exports.addToCart = async (req, res) => {
     for (const product of cart.products) {
       const productDoc = await Product.findById(product.product_id);
       if (productDoc) {
-        totalAmount += productDoc.price * product.quantity;
+        const productPrice = Number(productDoc.price);
+        const productQuantity = parseInt(product.quantity);
+        totalAmount += productPrice * productQuantity;
       }
     }
     cart.totalAmount = totalAmount;
@@ -139,6 +148,7 @@ exports.addToCart = async (req, res) => {
 
 
 
+
 exports.removeFromCart = async (req, res) => {
   try {
     const { productId } = req.params;
@@ -146,7 +156,7 @@ exports.removeFromCart = async (req, res) => {
 
     // Find the index of the product in the cart
     const productIndex = cart.products.findIndex(
-      (product) => product.product_id.toString() === productId
+      (product) => product.product_id== productId
     );
 
     if (productIndex !== -1) {
@@ -182,7 +192,7 @@ exports.updateCart = async (req, res) => {
     const { quantity } = req.body;
 
     const existingProduct = cart.products.find(
-      (product) => product.product_id.toString() === productId
+      (product) => product.product_id== productId
     );
 
     if (!existingProduct) {

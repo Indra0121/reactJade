@@ -9,6 +9,7 @@ main p {
 }
 p span{
     font-weight: bold;
+    font-size: 30px;
 }
 p i{
     color: lime;

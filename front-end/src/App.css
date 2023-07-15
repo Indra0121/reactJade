@@ -1,8 +1,11 @@
 nav{
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  width: 80%;
 
-
+}
+th {
+  margin-right: 10px; /* Add margin between header cells */
 }

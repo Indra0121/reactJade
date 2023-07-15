@@ -1,7 +1,8 @@
 .card {
     display: block;
-    width: 100px;
-    height: 50px;
+    width:fit-content;
+    height: fit-content;
+    padding-bottom: 5%;
     background-color: lime;
     font-size: large;
     color: white;
@@ -23,6 +24,10 @@
     flex-wrap: wrap;
     justify-content: center
 }
+.proproducts h3{
+    padding-top: 10%;
+    font-size: 25px;
+}
 select{
    position: relative;
    left:45%;
@@ -37,8 +42,8 @@ select{
 
 }
 .container_pro img {
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
     padding-right: 30px;
 }
 .informations{
@@ -51,4 +56,10 @@ select{
     background-color: lime;
     width: 100px;
     height: 60px;
+    border-radius: 30%;
+    font-size: medium;
+    color: white;
+}
+#buy{
+   
 }
